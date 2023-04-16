@@ -2,8 +2,14 @@ import os
 
 DEBUG = True
 
+# SSL
 PATH_CERTIFICATE = 'certificate.pem'
 PATH_PRIVATE_KEY = 'private.pem'
+
+# Log
+ERROR_SERVER_LOG_FILE = './error_server.log'
+ERROR_DB_LOG_FILE = './error_db.log'
+LOG_SIZE = 5  # Size in megabytes
 
 if DEBUG:
     PORT = 8888
