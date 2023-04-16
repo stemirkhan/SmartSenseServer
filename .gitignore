@@ -3,3 +3,5 @@
 __pycache__/
 certificate.pem
 private.pem
+error_db.log
+error_server.log
