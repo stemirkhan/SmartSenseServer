@@ -12,9 +12,11 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         arguments = parse_request_client(self.path)
+
         if validator_url_arguments(arguments) and (arguments['access_token'] in db.get_access_tokens()):
             db.add_measurements(arguments['temperature'], arguments['pressure'],
                                 arguments['carbonMonoxide'], arguments['humidity'])
+
             self.send_response(200, 'OK')
 
         else:
