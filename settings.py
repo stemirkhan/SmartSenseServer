@@ -1,20 +1,21 @@
 import os
 
 # SSL
-PATH_CERTIFICATE = 'certificate.pem'
-PATH_PRIVATE_KEY = 'private.pem'
+PATH_CERTIFICATE = os.getenv("PATH_CERTIFICATE")
+PATH_PRIVATE_KEY = os.getenv("PATH_PRIVATE_KEY")
 
 # Server
-PORT = os.getenv("SERVER_PORT")
-HOST = os.getenv("SERVER_HOST")
+SERVER_PORT = 8888
+SERVER_HOST = "127.0.0.1"
 
 # Log
-ERROR_SERVER_LOG_FILE = './error_server.log'
-ERROR_DB_LOG_FILE = './error_db.log'
+ERROR_SERVER_LOG_FILE = "./error_server.log"
+ERROR_DB_LOG_FILE = "./error_db.log"
 LOG_SIZE = 5  # Size in megabytes
 
 # DB
-SENSOR_READINGS_TABLE = 'sensor_readings'
+SENSOR_READINGS_TABLE = ""
+ACCESS_TOKEN_TABLE = ""
 USER_DB = os.getenv("USER_DB")
 HOST_DB = os.getenv("HOST_DB")
 PORT_DB = os.getenv("PORT_DB")
